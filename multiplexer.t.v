@@ -8,8 +8,8 @@ module testMultiplexer ();
   reg in0, in1, in2, in3;
   wire out;
 
-  behavioralMultiplexer multiplexer (out,addr0,addr1,in0,in1,in2,in3);
-  //structuralDecoder multiplexer (out,addr0,addr1,in0,in1,in2,in3); // Swap after testing
+  // behavioralMultiplexer multiplexer (out,addr0,addr1,in0,in1,in2,in3);
+  structuralDecoder multiplexer (out,addr0,addr1,in0,in1,in2,in3); // Swap after testing
 
   initial begin
   $display("addr0 addr1 in0 in1 in2 in3 | out | Expected Output");
