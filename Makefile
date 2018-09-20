@@ -1,3 +1,8 @@
+all: decoder.t adder.t multiplexer.t
+	make decoder
+	make adder
+	make multiplexer
+
 decoder: decoder.t
 	./decoder.t
 decoder.t: decoder.t.v decoder.v
