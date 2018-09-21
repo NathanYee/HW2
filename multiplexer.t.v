@@ -12,7 +12,7 @@ module testMultiplexer ();
   structuralMultiplexer multiplexer (out,addr0,addr1,in0,in1,in2,in3); // Swap after testing
 
   initial begin
-  $display("addr0 addr1 in0 in1 in2 in3 | out | Expected Output");
+  $display("addr0 addr1 in0 in1 in2 in3 | out | Eout");
   addr0=0;addr1=0;in0=0;in1=0;in2=0;in3=0; #1000 
   $display("    %b     %b   %b   %b   %b   %b |   %b | 0", addr0,addr1,in0,in1,in2,in3,out);
   addr0=0;addr1=0;in0=1;in1=0;in2=0;in3=0; #1000 

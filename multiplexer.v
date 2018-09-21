@@ -23,13 +23,14 @@ module structuralMultiplexer
     input address0, address1,
     input in0, in1, in2, in3
 );
-    // compute inversions
+    // wire and compute intermediate inversions
     wire naddress0;
     wire naddress1;
     `NOT a0Inv(naddress0, address0);
     `NOT a1Inv(naddress1, address1);
 
-    // compute ands with inputs
+    // use triple "AND" gates to wire the appropriate signed addresses with corresponding
+    // inputs
     wire in0and;
     wire in1and;
     wire in2and;
@@ -39,6 +40,8 @@ module structuralMultiplexer
     `AND in2and(in2and, in2, naddress0, address1);
     `AND in3and(in3and, in3, address0, address1);
 
+    // see if any of the intermediate "AND gates are true. Only one of the "AND" gates 
+    // can be true, due to the full permutations of the addresses.
     `OR outgate(out, in0and, in1and, in2and, in3and);
 
 endmodule

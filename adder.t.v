@@ -7,7 +7,7 @@ module testFullAdder();
     wire sum, carryout;
 
     // behavioralFullAdder adder (sum, carryout, a, b, carryin);
-    structuralFullAdder adder (sum, carryout, a, b, carryin);
+    structuralFullAdder adder (sum, carryout, a, b, carryin);  // Swap after testing
 
     initial begin
         // Your test code here
