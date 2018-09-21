@@ -3,7 +3,6 @@
 `include "multiplexer.v"
 
 module testMultiplexer ();
-  // Your test code here
   reg addr0, addr1;
   reg in0, in1, in2, in3;
   wire out;

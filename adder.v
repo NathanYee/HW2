@@ -24,7 +24,6 @@ module structuralFullAdder
     input b, 
     input carryin
 );
-    // Your adder code here
     wire alltrue;
     `AND alltrue(alltrue, a, b, carryin);
 

@@ -10,7 +10,6 @@ module testFullAdder();
     structuralFullAdder adder (sum, carryout, a, b, carryin);  // Swap after testing
 
     initial begin
-        // Your test code here
         $display("a b cin | cout sum | Ecout Esum");
         a=0;b=0;carryin=0; #1000
         $display("%b %b %b   |    %b   %b | 0     0", a,b,carryin,carryout,sum);
